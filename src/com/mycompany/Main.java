@@ -7,8 +7,8 @@ import com.mycompany.homework1.part1.employee.Employee;
 import com.mycompany.homework1.part1.mypoint.MyPoint;
 import com.mycompany.homework1.part1.mytriangle.MyTriangle;
 import com.mycompany.homework1.part1.rectangle.Rectangle;
-import com.mycompany.homework1.part2.Ball.Ball;
-import com.mycompany.homework1.part2.Ball.Container;
+import com.mycompany.homework1.part2.ball.Ball;
+import com.mycompany.homework1.part2.ball.Container;
 import com.mycompany.homework1.part2.mycomplex.MyComplex;
 import com.mycompany.homework1.part2.mypolynomial.MyPolynomial;
 

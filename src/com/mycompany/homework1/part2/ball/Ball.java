@@ -1,4 +1,4 @@
-package com.mycompany.homework1.part2.Ball;
+package com.mycompany.homework1.part2.ball;
 
 public class Ball {
     private float x;

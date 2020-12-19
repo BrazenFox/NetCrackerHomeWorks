@@ -1,4 +1,4 @@
-package com.mycompany.homework1.part2.Ball;
+package com.mycompany.homework1.part2.ball;
 
 public class Container {
     private int x1;
