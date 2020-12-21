@@ -47,7 +47,7 @@ public class MyComplex {
     public boolean isImaginary() {
         return imag != 0.0;
     }
-
+    // сначала сделал как в задании указано, потом увидел сообщения в скайпе - исправил, потом понял что зря, исправил обратно
     public boolean equals(double real, double imag) {
         return this.real == real && this.imag == imag;
     }
