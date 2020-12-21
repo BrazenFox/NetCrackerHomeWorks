@@ -56,6 +56,23 @@ public class MyComplex {
         return equals(another.getReal(), another.getImag());
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MyComplex myComplex = (MyComplex) o;
+        return myComplex.equals(this);
+    }
+
+    @Override
+    public int hashCode() {
+        int result=17;
+
+        result = 31*result + (int)this.real;
+        result = 31*result + (int)this.imag;
+        return result;
+    }
+
     public double magnitude() {
         return Math.sqrt(Math.pow(real, 2) + Math.pow(imag, 2));
     }
