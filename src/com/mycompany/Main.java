@@ -47,11 +47,11 @@ public class Main {
         ball1.move();
         System.out.println(ball1.toString());
         System.out.println("Is Ball in the container?: " + box.collides(ball1));
-        ball1.setxDelta(5);
+        ball1.setDeltaX(5);
         ball1.move();
         System.out.println(ball1.toString());
         System.out.println("Is Ball in the container?: " + box.collides(ball1));
-        ball1.setyDelta(3);
+        ball1.setDeltaY(3);
         ball1.move();
         System.out.println(ball1.toString());
         System.out.println("Is Ball in the container?: " + box.collides(ball1));
