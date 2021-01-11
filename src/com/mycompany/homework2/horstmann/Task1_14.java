@@ -33,9 +33,10 @@ public class Task1_14 {
 
     public boolean magicSquare(){
         for (int[] ints : matrix) {
-            if (ints.length != matrix.size())
+            if (ints.length != matrix.size()) {
                 System.out.println("Не квадрат");
                 return false;
+            }
         }
         int sum = 0;
         int sumRow = 0;
