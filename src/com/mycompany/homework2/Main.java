@@ -17,14 +17,14 @@ public class Main {
 
         //add(E)
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 5; i++) {
             test.add(new Circle(i + 1, "Red"));
         }
         //toString()
         System.out.println(test.toString());
         System.out.println("________________");
         //add(E,index)
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 5; i++) {
             test.add(i * 2, new Circle(i * 5, "Blue"));
         }
         //Iterator
@@ -40,7 +40,7 @@ public class Main {
         //remove(index)
         int k = test.size();
         Circle remCir = new Circle();
-        for (int i = 1; i < 3; i++) {
+        for (int i = 1; i < 5; i++) {
             remCir = test.remove(k - i);//k is fixed before and =6, for greater visability;
         }
         System.out.println("The last removed element: " + remCir.toString());
@@ -86,17 +86,17 @@ public class Main {
         CompareLinkList compareLinkList = new CompareLinkList(10000);
         compareLinkList.compareList();
 
-        TestClass testClass = new TestClass(500000);
+        TestClass testClass = new TestClass(10000);
         System.out.println("_________________________________________________");
 
         System.out.println("Compare Add and Remove for begin of Lists:");
         testClass.compareAddListStart("aaa");
         testClass.compareRemoveListStart();
         System.out.println("Compare Add and Remove for middle of Lists:");
-        testClass.compareAddList("aaa", 250000);
-        testClass.compareRemoveList(250000);
+        testClass.compareAddList("aaa", 10000);
+        testClass.compareRemoveList(10000);
         System.out.println("Compare Add and Remove for end of Lists:");
-        testClass.compareAddList("aaa", 500000);
+        testClass.compareAddList("aaa", 10000);
         testClass.compareRemoveListEnd();
 
         System.out.println("_______________");

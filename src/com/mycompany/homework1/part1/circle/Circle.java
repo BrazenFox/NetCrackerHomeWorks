@@ -43,4 +43,22 @@ public class Circle {
     public double getArea() {
         return Math.PI * Math.pow(radius, 2);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Circle)) { return false;}
+
+        Circle circle = (Circle) o;
+
+        return this.color.equals(circle.color) && (this.radius == circle.radius);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 17;
+        result = 31*result+(int)this.radius;
+        result = 31 * result + color.hashCode();
+        return result;
+    }
 }

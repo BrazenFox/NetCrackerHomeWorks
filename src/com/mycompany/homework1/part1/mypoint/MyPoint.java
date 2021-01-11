@@ -57,4 +57,22 @@ public class MyPoint {
         return this.distance(0,0);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof MyPoint)) { return false;}
+
+        MyPoint myPoint = (MyPoint) o;
+
+        return (this.y == myPoint.y)&&(this.x ==myPoint.x);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 17;
+        result = 31 * result + this.x;
+        result = 31 * result + this.y;
+        return result;
+    }
+
 }

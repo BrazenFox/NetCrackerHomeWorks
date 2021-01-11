@@ -46,4 +46,24 @@ public class MyTriangle {
         }
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof MyTriangle)) { return false;}
+
+        MyTriangle that = (MyTriangle) o;
+
+
+        return this.point1.equals(that.point1) && this.point2.equals(that.point2) && this.point3.equals(that.point3);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 17;
+        result = 31 * result + point1.hashCode();
+        result = 31 * result + point2.hashCode();
+        result = 31 * result + point3.hashCode();
+        return result;
+    }
+
 }

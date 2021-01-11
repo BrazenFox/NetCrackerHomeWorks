@@ -50,14 +50,14 @@ public class TestClass {
 
         System.out.println("Compare Add for Lists");
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             arrayList.add(place + i, element);
         }
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("Time for ArrayList =  " + estimatedTime);
 
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             linkedList.add(place + i, element);
         }
         estimatedTime = System.nanoTime() - startTime;
@@ -67,13 +67,13 @@ public class TestClass {
     public void compareRemoveList(int place) {
         System.out.println("Compare Remove for Lists");
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             arrayList.remove(place - i - 1);
         }
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("Time for ArrayList =  " + estimatedTime);
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             linkedList.remove(place - i - 1);
         }
         estimatedTime = System.nanoTime() - startTime;
@@ -83,13 +83,13 @@ public class TestClass {
     public void compareRemoveListStart() {
         System.out.println("Compare Remove for Lists");
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             arrayList.remove(0);
         }
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("Time for ArrayList =  " + estimatedTime);
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             linkedList.remove(0);
         }
         estimatedTime = System.nanoTime() - startTime;
@@ -99,14 +99,14 @@ public class TestClass {
     public void compareAddListStart(String element) {
         System.out.println("Compare Add for Lists");
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             arrayList.add(0, element);
         }
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("Time for ArrayList =  " + estimatedTime);
 
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             linkedList.add(0, element);
         }
         estimatedTime = System.nanoTime() - startTime;
@@ -116,13 +116,13 @@ public class TestClass {
     public void compareRemoveListEnd() {
         System.out.println("Compare Remove for Lists");
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             arrayList.remove(arrayList.size() - 1);
         }
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("Time for ArrayList =  " + estimatedTime);
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             linkedList.remove(linkedList.size() - 1);
         }
         estimatedTime = System.nanoTime() - startTime;
@@ -133,21 +133,21 @@ public class TestClass {
     public void compareAddSet(String element) {
         System.out.println("Compare Add for Sets");
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             hashSet.add(element + (i + size));
         }
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("Time for HashSet =  " + estimatedTime);
 
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             linkedHashSet.add(element + (i + size));
         }
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("Time for LinkedHashSet = " + estimatedTime);
 
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             treeSet.add(element + (i + size));
         }
         estimatedTime = System.nanoTime() - startTime;
@@ -157,21 +157,21 @@ public class TestClass {
     public void compareContainsSet(String element) {
         System.out.println("Compare Contains for Sets");
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             hashSet.contains(element + (5 * i));
         }
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("Time for HashSet =  " + estimatedTime);
 
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             linkedHashSet.contains(element + (5 * i));
         }
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("Time for LinkedHashSet = " + estimatedTime);
 
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             treeSet.contains(element + (5 * i));
         }
         estimatedTime = System.nanoTime() - startTime;
@@ -181,21 +181,21 @@ public class TestClass {
     public void compareRemoveSet(String element) {
         System.out.println("Compare Remove for Sets");
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             hashSet.remove(element + (3 * i + 1));
         }
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("Time for HashSet =  " + estimatedTime);
 
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             linkedHashSet.remove(element + (3 * i + 1));
         }
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("Time for LinkedHashSet = " + estimatedTime);
 
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             treeSet.remove(element + (3 * i + 1));
         }
         estimatedTime = System.nanoTime() - startTime;
@@ -205,21 +205,21 @@ public class TestClass {
     public void comparePutMap(String element) {
         System.out.println("Compare Put for Maps");
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             hashMap.put(element + (size + i), element);
         }
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("Time for HashMap =  " + estimatedTime);
 
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             linkedHashMap.put(element + (size + i), element);
         }
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("Time for LinkedHashMap = " + estimatedTime);
 
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             treeMap.put(element + (size + i), element);
         }
         estimatedTime = System.nanoTime() - startTime;
@@ -229,22 +229,22 @@ public class TestClass {
     public void compareGetMap(String element) {
         System.out.println("Compare Get for Maps");
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
-            hashMap.get(element + (600000 - 1 - i * 3));
+        for (int i = 0; i < 10000; i++) {
+            hashMap.get(element + (60000 - 1 - i * 3));
         }
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("Time for HashMap =  " + estimatedTime);
 
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
-            linkedHashMap.get(element + (600000 - 1 - i * 3));
+        for (int i = 0; i < 10000; i++) {
+            linkedHashMap.get(element + (60000 - 1 - i * 3));
         }
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("Time for LinkedHashMap = " + estimatedTime);
 
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
-            treeMap.get(element + (600000 - 1 - i * 3));
+        for (int i = 0; i < 10000; i++) {
+            treeMap.get(element + (60000 - 1 - i * 3));
         }
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("Time for TreeMap = " + estimatedTime);
@@ -253,21 +253,21 @@ public class TestClass {
     public void compareRemoveMap(String element) {
         System.out.println("Compare Remove for Maps");
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             hashMap.remove(element + (i * 3 + 42));
         }
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("Time for HashMap =  " + estimatedTime);
 
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             linkedHashMap.remove(element + (i * 3 + 42));
         }
         estimatedTime = System.nanoTime() - startTime;
         System.out.println("Time for LinkedHashMap = " + estimatedTime);
 
         startTime = System.nanoTime();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 10000; i++) {
             treeMap.remove(element + (i * 3 + 42));
         }
         estimatedTime = System.nanoTime() - startTime;

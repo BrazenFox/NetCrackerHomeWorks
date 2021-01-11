@@ -101,5 +101,24 @@ public class MyComplex {
         return new MyComplex(this.real, -this.imag);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof MyComplex)){return false;}
+
+        MyComplex myComplex = (MyComplex) o;
+
+        return (myComplex.real == this.real)&&(myComplex.imag==this.imag);
+    }
+
+    @Override
+    public int hashCode() {
+        int result=17;
+
+        result = 31*result + (int)this.real;
+        result = 31*result + (int)this.imag;
+        return result;
+    }
+
 
 }

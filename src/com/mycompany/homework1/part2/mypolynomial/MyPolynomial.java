@@ -1,5 +1,7 @@
 package com.mycompany.homework1.part2.mypolynomial;
 
+import java.util.Arrays;
+
 public class MyPolynomial {
     private double[] coeffs;
 
@@ -46,6 +48,24 @@ public class MyPolynomial {
             }
         }
         return new MyPolynomial(newCoeffs);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof MyPolynomial)){return false;}
+
+        MyPolynomial mp1 = (MyPolynomial) o;
+
+        return Arrays.equals(this.coeffs,mp1.coeffs);
+    }
+
+    @Override
+    public int hashCode() {
+        int hashcode = 17;
+        hashcode = 31*hashcode+Arrays.hashCode(coeffs);
+        return hashcode;
+
     }
 
 

@@ -43,4 +43,24 @@ public class Rectangle {
                 ", width=" + width +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Rectangle)) { return false;}
+
+        Rectangle rectangle = (Rectangle) o;
+
+        return (this.width==rectangle.width)&&(this.height==this.height);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 17;
+        result = 31 * result + (int)this.height;
+        result = 31 * result + (int)this.width;
+        return result;
+    }
+
+
 }

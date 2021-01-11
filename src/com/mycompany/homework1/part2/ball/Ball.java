@@ -77,4 +77,27 @@ public class Ball {
     public void reflectVertical() {
         this.deltaY *= -1;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Ball)){return false;}
+
+        Ball ball = (Ball) o;
+
+
+        return (ball.x == this.x) &&(ball.y == this.y) &&(ball.radius == this.radius) &&(ball.deltaX == this.deltaX) &&
+                (ball.deltaY == this.deltaY);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 17;
+        result = 31 * result + (int)this.x;
+        result = 31 * result + (int)this.y;
+        result = 31 * result + radius;
+        result = 31 * result + (int)this.deltaX;
+        result = 31 * result + (int)this.deltaY;
+        return result;
+    }
 }
