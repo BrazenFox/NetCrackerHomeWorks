@@ -1,13 +1,13 @@
-package com.mycompany.homework2.horstmann;
+package com.mycompany.horstmann.FundamentalProgrammingStructures;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Task1_14 {
+public class Task14 {
     ArrayList<int[]> matrix;
 
-    public Task1_14() {
+    public Task14() {
         Scanner input = new Scanner(System.in);
         ArrayList<int[]> matrixList = new ArrayList<int[]>();
         System.out.print("Введите строку матрицы: ");

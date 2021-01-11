@@ -1,4 +1,4 @@
-package com.mycompany;
+package com.mycompany.homework1;
 
 import com.mycompany.homework1.part1.book.Author;
 import com.mycompany.homework1.part1.book.Book;
