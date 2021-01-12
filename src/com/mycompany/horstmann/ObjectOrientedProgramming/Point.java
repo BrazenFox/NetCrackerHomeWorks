@@ -21,15 +21,11 @@ public final class Point {
     }
 
     public Point translate(double x, double y) {
-        this.x += x;
-        this.y += y;
-        return this;
+        return new Point(this.x+x, this.y+y);
     }
 
     public Point scale(double a) {
-        this.x *= a;
-        this.y *= a;
-        return this;
+        return new Point(this.x*a, this.y*a);
     }
 
     @Override
