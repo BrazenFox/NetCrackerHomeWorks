@@ -10,19 +10,18 @@ public class Main {
         System.out.println(point.toString());
         System.out.println(labeledPoint.toString());
         System.out.println(labeledPoint.getLabel());
-
         System.out.println(labeledPoint.x);
-        //System.out.println(Point.x);  ex3
+
+
+        Item item1 = new Item("Apple", 100000);
+        Item item2 = new Item("Apple", 100000);
+        System.out.println(item1.equals(item2));
+
 
         MixColor color = new MixColor();
         color.getRed();
         color.chooseColor();
         System.out.println(color.color);
-
-        Item item1 = new Item("abc", 1);
-        Item item2 = new Item("abc", 1);
-
-        System.out.println(item1.equals(item2));
 
 
     }

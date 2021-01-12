@@ -7,7 +7,8 @@ public abstract class Shape {
     private double dx;
     private double dy;
 
-    public Shape() {
+    public Shape(Point point) {
+        this.point = point;
     }
 
     public void moveBy(double dx, double dy) {
@@ -16,5 +17,21 @@ public abstract class Shape {
     }
 
     public abstract Point getCenter();
+
+    public Point getPoint() {
+        return point;
+    }
+
+    public void setPoint(Point point) {
+        this.point = point;
+    }
+
+    @Override
+    public Shape clone() throws CloneNotSupportedException {
+        Shape cloned = (Shape) super.clone();
+        cloned.point = new Point(point.getX(), point.getY());
+
+        return cloned;
+    }
 
 }

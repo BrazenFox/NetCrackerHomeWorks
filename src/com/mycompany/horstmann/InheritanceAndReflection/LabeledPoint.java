@@ -29,8 +29,8 @@ public class LabeledPoint extends Point {
         if (this == o) return true;
         if (!(o instanceof LabeledPoint)) return false;
         if (!super.equals(o)) return false;
-        LabeledPoint that = (LabeledPoint) o;
-        return Objects.equals(getLabel(), that.getLabel());
+        LabeledPoint labeledPoint = (LabeledPoint) o;
+        return Objects.equals(getLabel(), labeledPoint.getLabel());
     }
 
     @Override

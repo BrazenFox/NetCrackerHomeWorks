@@ -1,5 +1,7 @@
 package com.mycompany.horstmann.InheritanceAndReflection;
 
+import com.mycompany.homework1.part1.mypoint.MyPoint;
+
 import java.util.Objects;
 
 public class Point {
@@ -13,6 +15,8 @@ public class Point {
         this.y = y;
     }
 
+
+
     public double getX() {
         return x;
     }
@@ -23,22 +27,25 @@ public class Point {
 
     @Override
     public String toString() {
-        return "Point{" +
-                "x=" + x +
-                ", y=" + y +
-                '}';
+        return "(" + x + ", " + y + ")";
     }
+
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Point)) return false;
+        if (!(o instanceof Point)) { return false;}
+
         Point point = (Point) o;
-        return Double.compare(point.getX(), getX()) == 0 && Double.compare(point.getY(), getY()) == 0;
+
+        return (this.y == point.y)&&(this.x ==point.x);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getX(), getY());
+        int result = 17;
+        result = (int) (31 * result + this.x);
+        result = (int) (31 * result + this.y);
+        return result;
     }
 }

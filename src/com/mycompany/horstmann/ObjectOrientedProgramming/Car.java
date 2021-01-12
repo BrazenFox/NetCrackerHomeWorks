@@ -9,7 +9,7 @@ public class Car {
         this.fuelEffiency = fuelEffiency;
     }
 
-    public void Move (double distance) {
+    public void Move(double distance) {
         if (fuelLevel >= distance / fuelEffiency) {
             x += distance;
             fuelLevel -= distance / fuelEffiency;

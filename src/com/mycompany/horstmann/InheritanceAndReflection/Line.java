@@ -1,21 +1,34 @@
 package com.mycompany.horstmann.InheritanceAndReflection;
 
-import com.mycompany.horstmann.InheritanceAndReflection.Shape;
 
 public class Line extends Shape {
 
-    Point point2;
-    Point center;
+    private Point to;
 
     public Line(Point from, Point to) {
-        this.point = from;
-        this.point2 = to;
+        super(from);
+        this.to = to;
     }
 
     @Override
     public Point getCenter() {
-        center.x = (point2.x - point.x) / 2;
-        center.y = (point2.y - point.y) / 2;
-        return center;
+        Point from = getPoint();
+        return new Point(to.getX() - from.getX(), to.getY() - from.getY());
+    }
+
+    @Override
+    public Line clone() throws CloneNotSupportedException {
+        Line cloned = (Line) super.clone();
+        cloned.to = new Point(to.getX(), to.getY());
+
+        return cloned;
+    }
+
+    public Point getTo() {
+        return to;
+    }
+
+    public void setTo(Point to) {
+        this.to = to;
     }
 }

@@ -4,22 +4,23 @@ import com.mycompany.horstmann.InheritanceAndReflection.Point;
 
 public class Rectangle extends Shape{
 
-    Point center;
     private double width;
     private double height;
 
     public Rectangle(Point topLeft, double width, double height) {
-        this.point = topLeft;
+        super(topLeft);
         this.width = width;
         this.height = height;
     }
 
     @Override
     public Point getCenter() {
-        double dx = this.width / 2;
-        double dy = this.height / 2;
-        center.x = point.x + dx;
-        center.y = point.y + dy;
-        return center;
+        Point topLeft = getPoint();
+        return new Point(topLeft.getX() + (width / 2), topLeft.getY() + (height / 2));
+    }
+
+    @Override
+    public Rectangle clone() throws CloneNotSupportedException {
+        return (Rectangle) super.clone();
     }
 }
