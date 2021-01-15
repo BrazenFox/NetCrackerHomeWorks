@@ -67,7 +67,11 @@ public class MyLinkedList<E> implements ILinkedList<E> {
 
     @Override
     public void clear() {
-        firstElement.nextNode = lastElement = null;
+        Node<E> node = firstElement;
+        for (int i = 0; i < size; i++) {
+            node.element = null;
+            node = node.nextNode;
+        }
         size = 0;
     }
 
@@ -111,7 +115,7 @@ public class MyLinkedList<E> implements ILinkedList<E> {
         E result = nodeRemove.element;
         nodeRemove.element = null;
         nodeRemove.nextNode = null;
-        size -= 1;
+        size --;
         return result;
 
     }
