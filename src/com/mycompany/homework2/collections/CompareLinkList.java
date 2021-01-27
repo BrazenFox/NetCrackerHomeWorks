@@ -10,7 +10,7 @@ public class CompareLinkList {
     }
 
     public void compareList() {
-        MyLinkedList<String> myList = new MyLinkedList<>(String.class);
+        MyLinkedList<String> myList = new MyLinkedList<>();
         LinkedList<String> list = new LinkedList<>();
         System.out.println("Compare add(E):");
         compareAdd(myList, list);

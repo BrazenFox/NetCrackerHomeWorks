@@ -20,4 +20,6 @@ public interface ILinkedList<E> extends Iterable<E> {
     E[] toArray();
 
     String toString();
+
+
 }

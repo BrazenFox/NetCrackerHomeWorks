@@ -8,7 +8,7 @@ import com.mycompany.homework2.testcollections.TestClass;
 public class Main {
 
     public static void main(String[] args) {
-        MyLinkedList<Circle> test = new MyLinkedList<>(Circle.class);
+        MyLinkedList<Circle> test = new MyLinkedList<>();
 
         //Test functions of MyLinkedList
 

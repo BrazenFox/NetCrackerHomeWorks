@@ -3,6 +3,7 @@ package com.mycompany.homework2.collections;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.NoSuchElementException;
 
 public class MyLinkedList<E> implements ILinkedList<E> {
@@ -10,12 +11,6 @@ public class MyLinkedList<E> implements ILinkedList<E> {
     private int size;
     private Node<E> firstElement;
     private Node<E> lastElement;
-    private Class classE;
-
-    public MyLinkedList(Class classE) {
-        this.classE = classE;
-    }
-
 
     Node<E> getNode(int index) {
         Node<E> node = firstElement;
@@ -26,7 +21,7 @@ public class MyLinkedList<E> implements ILinkedList<E> {
     }
 
     public boolean checkIndex(int value) {
-        return (value >= 0) && (value < size);
+        return (value >= 0) && (value <= size);
     }
 
     @Override
@@ -115,7 +110,7 @@ public class MyLinkedList<E> implements ILinkedList<E> {
         E result = nodeRemove.element;
         nodeRemove.element = null;
         nodeRemove.nextNode = null;
-        size --;
+        size--;
         return result;
 
     }
@@ -137,16 +132,24 @@ public class MyLinkedList<E> implements ILinkedList<E> {
         return size;
     }
 
+
+    @SuppressWarnings("unchecked")
     @Override
     public E[] toArray() {
-        E[] result = (E[]) Array.newInstance(classE, size);
-        Node<E> node = firstElement;
-        for (int i = 0; i < size; i++) {
-            result[i] = node.element;
-            node = node.nextNode;
+
+        E tmp = this.get(0);
+        if (tmp == null) return (E[]) Array.newInstance(Object.class, 0);
+        int index = 0;
+        E[] newArray = (E[]) Array.newInstance(tmp.getClass(), size);
+
+        for (Node<E> node = firstElement; node != null; node = node.nextNode) {
+            newArray[index] = node.element;
+            index++;
         }
-        return result;
+
+        return newArray;
     }
+
 
     public String toString() {
         return Arrays.toString(toArray());
